@@ -1,0 +1,41 @@
+###
+GET http://localhost:8080/
+Accept: application/json
+
+###
+GET http://localhost:8080/profile
+Accept: application/json
+
+
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/films
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/films/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/films
+Content-Type: application/json
+
+{
+    "title": "Prueba",
+    "description": "Prueba Descrip.",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/films/9
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/films/9
+Content-Type: application/json
+
+{
+    "title": "Prueba Modificada",
+    "description": "Prueba Descrip. Modificada",
+    "last_update": "2006-02-15"
+}

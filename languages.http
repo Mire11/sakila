@@ -6,7 +6,7 @@ Accept: application/json
 GET http://localhost:8080/profile
 Accept: application/json
 
-
+### Languages
 
 ###OBTENER TODOS LOS REGISTROS
 GET http://localhost:8080/languages
@@ -37,4 +37,203 @@ Content-Type: application/json
     "name": "Prueba_Modificada",
     "last_update": "2006-08-15"
 }
+###Film
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/films
+Accept: application/json
 
+###OBTENER UN REGISTRO
+GET http://localhost:8080/films/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/films
+Content-Type: application/json
+
+{
+    "title": "Prueba",
+    "description": "Prueba Descrip.",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/films/9
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/films/9
+Content-Type: application/json
+
+{
+    "title": "Prueba Modificada",
+    "description": "Prueba Descrip. Modificada",
+    "last_update": "2006-02-15"
+}
+### Customer
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/customers
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/customers/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/customers
+Content-Type: application/json
+
+{
+    "store_id":"1",
+    "first_name": "Prueba",
+    "last_name": "Prueba L",
+    "address_id":"5",
+    "active":"1",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/customers/9
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/customers/9
+Content-Type: application/json
+
+{
+    "first_name": "Prueba_Modificada",
+    "last_update": "2006-08-15"
+}
+
+
+###Inventary
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/inventories
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/inventories/4580
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/inventories
+Content-Type: application/json
+
+{
+    "film_id":"5",
+    "store_id":"1",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/inventories/4583
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/inventories/4583
+Content-Type: application/json
+
+{
+    "film_id":"6",
+    "store_id":"2",
+    "last_update": "2006-02-15"
+}
+
+### Payment
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/payments
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/payments/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/payments
+Content-Type: application/json
+
+{
+    "rental_date":"2006-02-15",
+    "inventory_id":"20",
+    "customer_id":"5",
+    "return_date":"2006-02-18",
+    "staff_id":"8",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/payments/4583
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+
+
+###Rental
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/rentals
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/rentals/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/rentals
+Content-Type: application/json
+
+{
+    "film_id":"5",
+    "store_id":"1",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/rentals/4583
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/rentals/4583
+Content-Type: application/json
+
+{
+    "film_id":"6",
+    "store_id":"2",
+    "last_update": "2006-02-15"
+}
+
+### Store
+
+###OBTENER TODOS LOS REGISTROS
+GET http://localhost:8080/stores
+Accept: application/json
+
+###OBTENER UN REGISTRO
+GET http://localhost:8080/stores/1
+Accept: application/json
+
+###CREAR UN REGISTRO
+POST http://localhost:8080/stores
+Content-Type: application/json
+
+{
+    "film_id":"5",
+    "store_id":"1",
+    "last_update": "2006-02-15"
+}
+
+###ELIMINAR UN REGISTRO
+DELETE  http://localhost:8080/stores/4583
+Accept: application/json
+
+###MODIFICAR UN REGISTRO
+PUT  http://localhost:8080/stores/4583
+Content-Type: application/json
+
+{
+    "film_id":"6",
+    "store_id":"2",
+    "last_update": "2006-02-15"
+}
